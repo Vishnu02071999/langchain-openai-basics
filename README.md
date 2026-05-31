@@ -31,10 +31,13 @@ print(result)
 # Explanation
 1. Import Required Libraries
 from langchain_openai import OpenAI
+
 from dotenv import load_dotenv
+
 langchain_openai: Provides integration between LangChain and OpenAI models.
 python-dotenv: Loads environment variables from a .env file.
-2. Load Environment Variables
+3. Load Environment Variables
+
 load_dotenv()
 
 This function loads variables from the .env file into the application's environment.
@@ -46,13 +49,14 @@ OPENAI_API_KEY=your_api_key_here
 This keeps sensitive information such as API keys secure and prevents them from being hardcoded into the source code.
 
 3. Initialize the Language Model
+   
 llm = OpenAI(model="gpt-3.5-turbo-instruct")
 
 This creates an instance of the OpenAI model.
-
 gpt-3.5-turbo-instruct is an instruction-following model.
 The model uses the API key loaded from the environment variables.
 4. Invoke the Model
+
 result = llm.invoke("What is the capital of India?")
 
 The prompt is sent to the language model, which processes it and generates a response.
@@ -60,7 +64,9 @@ The prompt is sent to the language model, which processes it and generates a res
 Expected Output:
 
 New Delhi
+
 5. Print the Result
+   
 print(result)
 
 Displays the model's response in the terminal.
