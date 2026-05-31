@@ -12,8 +12,11 @@ Print the generated response.
 # Code
 
 from langchain_openai import OpenAI
+
 from dotenv import load_dotenv
+
 import os
+
 from pathlib import Path
 
 load_dotenv()
@@ -25,7 +28,7 @@ result = llm.invoke("What is the capital of India?")
 print(result)
 
 
-📖 Explanation
+# Explanation
 1. Import Required Libraries
 from langchain_openai import OpenAI
 from dotenv import load_dotenv
@@ -64,7 +67,7 @@ Displays the model's response in the terminal.
 
 
 
-Install Dependencies
+# Install Dependencies
 pip install langchain-openai python-dotenv
 🔑 Configure OpenAI API Key
 
@@ -74,18 +77,18 @@ OPENAI_API_KEY=your_api_key_here
 
 Replace your_api_key_here with your actual OpenAI API key.
 
-▶️ Run the Application
-python app.py
+# Run the Application
+python llm_demo.py
 Sample Output
 New Delhi
 
-🧠 What I Learned
+# What I Learned
 How to securely manage API keys using .env files.
 How to integrate OpenAI models with LangChain.
 How to send prompts to an LLM using invoke().
 Basic LangChain workflow for interacting with language models.
 
-📚 Technologies Used
+# Technologies Used
 Python
 LangChain
 OpenAI API
