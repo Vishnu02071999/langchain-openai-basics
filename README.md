@@ -9,22 +9,19 @@ Initialize an OpenAI LLM using LangChain.
 Send a prompt to the model.
 Print the generated response.
 
-🚀 Code
+# Code
+
 from langchain_openai import OpenAI
 from dotenv import load_dotenv
 import os
 from pathlib import Path
 
-# Load environment variables from .env file
 load_dotenv()
 
-# Initialize the OpenAI model
 llm = OpenAI(model="gpt-3.5-turbo-instruct")
 
-# Send a prompt to the model
 result = llm.invoke("What is the capital of India?")
 
-# Print the response
 print(result)
 
 
